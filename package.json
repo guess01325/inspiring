@@ -719,7 +719,14 @@
     "@babel/plugin-proposal-private-methods": "^7.18.6"
   },
   "scripts": {
-    "test": "rails test"
+    "test": "rails test",
+    "heroku-postbuild": "npm install && npm run build"
+
+  },
+  "heroku": {
+    "nodejs": {
+      "build": "npm install && npm run build"
+    }
   },
   "repository": {
     "type": "git",
