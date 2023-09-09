@@ -1,7 +1,12 @@
-
 {
   "dependencies": {
+    "@rails/webpacker": "5.4.4",
     "axios": "^0.22.0",
-    "react-router-dom": "^5.3.0"
+    "react-router-dom": "^5.3.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3"
   }
 }
