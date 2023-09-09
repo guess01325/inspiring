@@ -12,6 +12,7 @@ require "action_controller/railtie"
 # require "action_text/engine"
 require "action_view/railtie"
 require "action_cable/engine"
+require 'sprockets/railtie'
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -22,6 +23,8 @@ module Inspiring5
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
+
+
 
     # Configuration for the application, engines, and railties goes here.
     #
@@ -34,6 +37,8 @@ module Inspiring5
     # Only loads a smaller set of middleware suitable for API only apps.
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
+    config.assets.enabled = true
+
     config.api_only = true
   end
 end
