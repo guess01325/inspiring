@@ -12,7 +12,6 @@ Rails.application.configure do
   config.eager_load = false
 
   
-config.assets.digest = true
 
 
   # Show full error reports.
