@@ -9,11 +9,6 @@ gem "rails", "~> 7.0.7"
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 
-gem 'rails_12factor'
-
-
-
-
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -26,6 +21,9 @@ gem "puma", "~> 5.0"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
+
+gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
+gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 
  gem 'rack-cors'
 
@@ -54,7 +52,14 @@ gem 'sprockets-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'sqlite3'
+end
+
+group :production do
+  gem "pg", "~> 1.1"  # dont want sqlite in production
+  gem 'unicorn' # make sure you follow installation instructions for this gem
+  gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
+  gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 end
 
 group :development do
@@ -63,5 +68,10 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'pry-rails'
   gem 'spring'
+end
+
+
+group :doc do
+  gem 'sdoc', require: false
 end
 
