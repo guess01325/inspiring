@@ -9,8 +9,6 @@ gem "rails", "~> 7.0.7"
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 
-gem 'webpacker', '~> 5.0'
-
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -46,12 +44,15 @@ gem "bootsnap", require: false
 # gem "rack-cors"
 
 group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do
-  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
+  gem 'awesome_print'
+  gem 'listen', '~> 3.3'
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'pry-rails'
+  gem 'spring'
 end
 
