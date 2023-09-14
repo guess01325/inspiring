@@ -3,7 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.2.2"
 
-gem 'dotenv-rails', groups: [:development, :test]
 
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
@@ -71,6 +70,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'pry-rails'
   gem 'spring'
+  gem 'dotenv-rails'
+
 end
 
 
