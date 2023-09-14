@@ -14,6 +14,7 @@ require "action_view/railtie"
 require "action_cable/engine"
 require 'sprockets/railtie'
 require 'dotenv'
+Dotenv.load
 
 # require "rails/test_unit/railtie"
 
@@ -25,8 +26,6 @@ module Inspiring5
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
-    Dotenv.load
-
 
 
 
