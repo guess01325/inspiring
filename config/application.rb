@@ -13,8 +13,7 @@ require "action_controller/railtie"
 require "action_view/railtie"
 require "action_cable/engine"
 require 'sprockets/railtie'
-require 'dotenv'
-Dotenv.load
+
 
 # require "rails/test_unit/railtie"
 

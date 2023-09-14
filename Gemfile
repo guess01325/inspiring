@@ -8,6 +8,9 @@ ruby "3.2.2"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.7"
 
+gem 'dotenv-rails', require: 'dotenv/rails-now'
+gem 'gem-that-requires-env-variables'
+
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 
@@ -70,7 +73,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'pry-rails'
   gem 'spring'
-  gem 'dotenv-rails'
+
 
 end
 
