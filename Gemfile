@@ -8,8 +8,7 @@ ruby "3.2.2"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.7"
 
-gem 'dotenv-rails', require: 'dotenv/rails-now'
-gem 'gem-that-requires-env-variables'
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
