@@ -8,7 +8,6 @@ ruby "3.2.2"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.7"
 
-gem 'dotenv-rails', groups: [:development, :test]
 
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
@@ -26,14 +25,10 @@ gem "puma", "~> 5.0"
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
-gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
-gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
-
  gem 'rack-cors'
 
  gem 'faker'
 
- gem "rake", "13.0.6"
 
  gem 'jwt','~> 2.0'
 
@@ -41,30 +36,16 @@ gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem "bcrypt", "~> 3.1.7"
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+gem 'bootsnap', '>= 1.4.4', require: false
 
-# Reduces boot times through caching; required in config/boot.rb
-gem "bootsnap", require: false
-
-
-gem 'sprockets-rails'
-
-
-# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem "rack-cors"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'sqlite3'
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
 end
 
-group :production do
-  gem "pg", "~> 1.1"  # dont want sqlite in production
-  gem 'unicorn' # make sure you follow installation instructions for this gem
-  gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
-  gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
-end
+
 
 group :development do
   gem 'awesome_print'
@@ -77,7 +58,6 @@ group :development do
 end
 
 
-group :doc do
-  gem 'sdoc', require: false
-end
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
