@@ -26,7 +26,11 @@ module Inspiring5
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
-
+    
+    
+    config.assets.enabled = true
+    config.assets.compile = true # To compile assets on-demand (not recommended for production)
+config.assets.digest = true  # To add fingerprinting to asset URLs
 
 
     # Configuration for the application, engines, and railties goes here.

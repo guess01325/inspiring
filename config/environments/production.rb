@@ -17,6 +17,11 @@ Rails.application.configure do
   # Enable server timing
   config.server_timing = true
 
+  config.serve_static_files = true # To serve static assets directly
+config.assets.js_compressor = :uglifier
+config.assets.css_compressor = :sass
+
+
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join("tmp/caching-dev.txt").exist?

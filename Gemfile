@@ -38,6 +38,9 @@ gem "bcrypt", "~> 3.1.7"
 
 gem 'bootsnap', '>= 1.4.4', require: false
 
+gem 'sprockets-rails'
+gem 'sass-rails'
+gem 'uglifier'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -48,6 +51,7 @@ end
 
 
 group :development do
+
   gem 'rake'
   gem 'awesome_print'
   gem 'listen', '~> 3.3'
