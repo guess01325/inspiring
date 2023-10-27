@@ -48,6 +48,8 @@ end
 
 
 group :development do
+  gem 'sprockets' # Replace X.Y.Z with the appropriate version
+
   gem 'rake'
   gem 'awesome_print'
   gem 'listen', '~> 3.3'

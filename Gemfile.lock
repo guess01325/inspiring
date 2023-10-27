@@ -162,6 +162,9 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     spring (4.1.1)
+    sprockets (4.2.1)
+      concurrent-ruby (~> 1.0)
+      rack (>= 2.2.4, < 4)
     thor (1.2.2)
     timeout (0.4.0)
     tzinfo (2.0.6)
@@ -190,6 +193,7 @@ DEPENDENCIES
   rails (~> 7.0.7)
   rake
   spring
+  sprockets
   tzinfo-data
 
 RUBY VERSION
