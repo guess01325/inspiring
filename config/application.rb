@@ -29,7 +29,10 @@ module Inspiring5
     
     
     config.assets.enabled = true
-    config.assets.compile = true # To compile assets on-demand (not recommended for production)
+    config.assets.compile = true
+    config.assets.version = '1.0'
+
+    # To compile assets on-demand (not recommended for production)
 config.assets.digest = true  # To add fingerprinting to asset URLs
 
 
