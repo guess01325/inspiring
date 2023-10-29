@@ -16,50 +16,40 @@ gem "pg", "~> 1.1"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
-# Build JSON APIs with ease [https://github.com/rails/jbuilder]
-# gem "jbuilder"
-
-# Use Redis adapter to run Action Cable in production
-# gem "redis", "~> 4.0"
-
-# Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
-# gem "kredis"
-
- gem 'rack-cors'
-
- gem 'faker'
 
 
- gem 'jwt','~> 2.0'
+
+
 
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem "bcrypt", "~> 3.1.7"
 
+gem 'jwt','~> 2.0'
+
 gem 'bootsnap', '>= 1.4.4', require: false
 
-gem 'sprockets-rails'
-gem 'sass-rails'
-gem 'uglifier'
+gem 'rack-cors'
 
+gem 'faker'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-
+  
 end
 
 
 
 group :development do
-
+  
   gem 'rake'
   gem 'awesome_print'
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'pry-rails'
   gem 'spring'
-
-
+  
+  
 end
 
 
