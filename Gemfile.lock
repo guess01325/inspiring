@@ -183,11 +183,11 @@ DEPENDENCIES
   faker
   jwt (~> 2.0)
   listen (~> 3.3)
-  pg (~> 1.1)
+  pg
   pry-rails
-  puma (~> 5.0)
+  puma
   rack-cors
-  rails (~> 7.0.7)
+  rails
   spring
   tzinfo-data
 
