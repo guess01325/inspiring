@@ -67,20 +67,14 @@ m = Module.new do
       bundler_requirement_for(lockfile_version)
   end
 
-  def bundler_requirement
-    return "#{Gem::Requirement.default}.a" unless bundler_version
+  def bundler_requirement_for(version)
+    return "#{Gem::Requirement.default}.a" unless version
 
-    bundler_gem_version = Gem::Version.new(bundler_version)
+    bundler_gem_version = Gem::Version.new(version)
 
-    requirement = bundler_gem_version.approximate_recommendation
-
-    return requirement unless Gem::Version.new(Gem::VERSION) < Gem::Version.new("2.7.0")
-
-    requirement += ".a" if bundler_gem_version.prerelease?
-
-    requirement
+    bundler_gem_version.approximate_recommendation
   end
-  
+
   def load_bundler!
     ENV["BUNDLE_GEMFILE"] ||= gemfile
 
