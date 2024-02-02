@@ -6,15 +6,15 @@ ruby "3.2.2"
 
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails"
+gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 
 
 # Use postgresql as the database for Active Record
-gem "pg"
+gem 'pg', '~> 1.1'
 
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem "puma"
+gem 'puma', '~> 5.0'
 
 
 #just a edit
@@ -22,9 +22,9 @@ gem "puma"
 
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-gem "bcrypt"
+gem 'bcrypt', '~> 3.1.7'
 
-gem 'jwt','~> 2.0'
+gem 'jwt'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 
