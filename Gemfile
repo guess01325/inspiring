@@ -8,10 +8,20 @@ ruby "3.2.2"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.0', '>= 7.0.0'
 
+gem 'sprockets-rails'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 
+gem "importmap-rails"
+
+gem 'turbo-rails'
+
+gem 'stimulus-rails'
+
+gem 'jbuilder'
+
+gem 'redis', '~> 4.0'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
