@@ -10,8 +10,8 @@ gem 'rails', '~> 7.0.0', '>= 7.0.0'
 
 gem 'sprockets-rails'
 
-# Use postgresql as the database for Active Record
-gem 'pg', '~> 1.1'
+# # Use postgresql as the database for Active Record
+# gem 'pg', '~> 1.1'
 
 gem "importmap-rails"
 
@@ -50,14 +50,14 @@ gem 'faker'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  
+  gem 'sqlite3'
 end
 
 
 
 group :development do
   
-
+  gem 'pg'
   gem 'awesome_print'
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
